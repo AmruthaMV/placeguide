@@ -1,0 +1,11 @@
+version : '3.2'
+services :
+  placesguide :
+    build : .
+    ports :
+      - "5000:5000"
+      - "27017:27017"
+    links :
+      - my_db
+  my_db :
+    build : "./db"
